@@ -1,6 +1,6 @@
 {
   "name": "@qingf/autoprettier",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "description": "自动根据工程中（已存在的）eslintrc配置以递归形式格式化指定目录",
   "main": "src/index.js",
   "scripts": {
