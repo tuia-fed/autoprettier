@@ -29,14 +29,15 @@ const recursiveFiles = function recursiveFiles(files, dirname, pattern = /\.(js|
  * 语法校验dir
  * @param {String} dir
  * @param {Regex} file
+ * @param {Object} params
  */
-function lintDir(dir, file = /\.(js|jsx)$/) {
+function lintDir(dir, file = /\.(js|jsx)$/, { configFile }) {
   let files = []
   recursiveFiles(files, dir, file)
 
   const cli = new CLIEngine({
     fix: true,
-    configFile: '.eslintrc',
+    configFile: configFile || '.eslintrc',
     useEslintrc: true
   })
 
