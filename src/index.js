@@ -19,7 +19,7 @@ const recursiveFiles = function recursiveFiles(files, dirname, pattern = /\.(js|
     if (stat.isFile() && pattern.test(absPath)) {
       files.push(absPath)
     } else if (stat.isDirectory()) {
-      recursiveFiles(files, absPath)
+      recursiveFiles(files, absPath, pattern)
     }
   })
   return files
