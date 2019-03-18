@@ -31,7 +31,7 @@ const recursiveFiles = function recursiveFiles(files, dirname, pattern = /\.(js|
  * @param {Regex} file
  * @param {Object} params
  */
-function lintDir(dir, file = /\.(js|jsx)$/, { configFile }) {
+function lintDir(dir, file = /\.(js|jsx)$/, { configFile } = {}) {
   let files = []
   recursiveFiles(files, dir, file)
 

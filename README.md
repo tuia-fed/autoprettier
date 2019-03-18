@@ -20,7 +20,7 @@ pnpm i @qingf/autoprettier -D
 
 
 ```js
-require('@qingf/autoprettier')(require('path').resolve(__dirname, 'client/pages/pro'), /\.(js|jsx)$/)
+require('@qingf/autoprettier')(require('path').resolve(__dirname, 'client/pages/pro'), /\.(js|jsx)$/, { configFile: '.eslintrc.js'})
 ```
 
 > no need表示该文件符合eslint配置的语法规则；autofixed表示已根据语法规则自动修补
